@@ -141,12 +141,12 @@ db.exec(`
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
   );
 
-  -- Site Settings Table
+ -- Site Settings Table
   CREATE TABLE IF NOT EXISTS site_settings (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     key_name TEXT UNIQUE NOT NULL,
     value TEXT,
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
   );
 
   -- Page Views Table
