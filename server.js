@@ -211,7 +211,7 @@ function seedDatabase() {
     products.forEach(prod => insertProduct.run(...prod));
 
     // Insert admin user (password: admin123)
-    const bcrypt = require('bcryptjs');
+    //const bcrypt = require('bcryptjs');
     const hashedPassword = bcrypt.hashSync('admin123', 10);
     db.prepare('INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)').run('مدير الموقع', 'admin@herbal-store.com', hashedPassword, 'admin');
 
